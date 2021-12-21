@@ -9,8 +9,8 @@ echo -e ''
 
 if [ "$choice" = "y" ]; then
 	if [ -b "$partition" ]; then
-		sudo umount $partition
 		echo 'Unit is unmounting...'
+		sudo umount $partition
 		echo 'Unmounting done!'
 		echo 'Unit is formatting...'
 		sudo mkfs -t vfat $partition 1>/dev/null
